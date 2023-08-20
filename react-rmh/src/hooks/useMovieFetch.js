@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import API from "../API";
 
 // Helpers
-import { isPresistedState } from "../helpers";
+import { isPersistedState } from "../helpers";
 
 export const useMovieFetch = (movieId) => {
   const [state, setState] = useState({});
@@ -35,7 +35,7 @@ export const useMovieFetch = (movieId) => {
       }
     };
 
-    const sessionState = isPresistedState(movieId);
+    const sessionState = isPersistedState(movieId);
     if (sessionState) {
       setState(sessionState);
       setLoading(false);

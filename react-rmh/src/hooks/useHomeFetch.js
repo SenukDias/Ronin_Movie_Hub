@@ -5,7 +5,7 @@ import { useState, useEffect, useRef  } from "react";
 import API from '../API';
 
 // Helpers
-import { isPresistedState } from "../helpers";
+import { isPersistedState } from "../helpers";
 
 const initialState ={
     page:0,
@@ -47,7 +47,7 @@ export const useHomeFetch = () => {
     // Initial & Search Render
     useEffect(() => {
         if(!searchTerm) {
-            const sessionState = isPresistedState('homeState');
+            const sessionState = isPersistedState('homeState');
 
             if(sessionState) {
                 console.log('Grabbing from session Storage');
