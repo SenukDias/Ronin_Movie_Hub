@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// Components
+import ButtonMore, { Wrapper } from "../ButtonMore";
+
 const Rate = ({ callback }) => {
     const [value, setValue ] = useState(5);
 
