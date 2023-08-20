@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 // Components
 import Thumb from "../Thumb";
@@ -36,7 +37,7 @@ const MovieInfo = ({ movie }) => (
                         <h3>DIRECTOR{movie.directors.length > 1 ? 'S' : ''}</h3>
                         {movie.directors.map(director =>(
                             <p key={director.credit_id} > {director.name} </p>
-                            
+
                         ))}
 
                     </div>
@@ -46,6 +47,10 @@ const MovieInfo = ({ movie }) => (
 
     </Wrapper>
 
-)
+);
+
+MovieInfo.propTypes = {
+    movie: PropTypes.object
+};
 
 export default MovieInfo;
