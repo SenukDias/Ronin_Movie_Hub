@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Analytics } from '@vercel/analytics/react';
+
 // Routing
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -26,6 +28,7 @@ const App = () => (
         <Route path="/:movieId" element={<Movie />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
+      <Analytics />
       <GlobalStyle />
     </UserProvider>
   </Router>

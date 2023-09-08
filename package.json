@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@vercel/analytics": "^1.0.2",
     "latest-version": "^7.0.0"
   }
 }
